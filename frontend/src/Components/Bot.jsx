@@ -16,7 +16,7 @@ function Bot() {
         setLoading(true);
         if(!input.trim()) return;
         try {
-           const res=await axios.post("https://specific-data-trained-ai-chatbot-mern.onrender.com",{
+           const res=await axios.post("https://specific-data-trained-ai-chatbot-mern.onrender.com/bot/v1/message",{
                 text: input
             })
             if(res.status === 200) {
